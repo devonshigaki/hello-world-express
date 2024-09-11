@@ -7,8 +7,8 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-module.exports = app;
+module.exports = { app, server };
